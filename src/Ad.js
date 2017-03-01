@@ -5,9 +5,9 @@ import './Ad.css';
 class Ad extends Component {
   render() {
     return (
-      <div className="container-fluid btnMargin" style={{"text-align": "center"}}>
-        <button type="button" className="btn btn-primary">Make Appointment</button>
-        <button type="button" className="btn btn-warning">VIP Appointment</button>
+      <div className="container-fluid btnMargin" style={{"textAlign": "center"}}>
+        <button className="btn btn-primary btn-fill">Make Appointment</button>
+        <button className="btn btn-warning btn-fill">VIP Appointment</button>
       </div>
     );
   }

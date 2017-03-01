@@ -1,0 +1,26 @@
+{
+  "en": {
+    "header":{
+      "iphonerepair":"IPhone Repair",
+      "ipadrepair":"IPad Repair",
+      "pricing":"Pricing",
+      "aboutus":"About Us"
+    },
+    "ad":{
+      "appointment":"Make Appointment",
+      "vipappoinment":"VIP Appointment"
+    }
+  },
+  "ch":{
+    "header":{
+      "iphonerepair":"IPhone 修理",
+      "ipadrepair":"IPad 修理",
+      "pricing":"报价",
+      "aboutus":"关于我们"
+    },
+    "ad":{
+      "appointment":"预约",
+      "vipappoinment":"VIP 预约"
+    }
+  }
+}
