@@ -3,16 +3,9 @@ import './Header.css';
 
 class Header extends Component {
 
-  handleLangChange(){
-    if(this.props.current ==='en'){
-      this.props.switchLang('ch');
-    }
-    else{
-      this.props.switchLang('en');
-    }
-  }
-
   render() {
+    let switchLanguage = this.props.switchLanguage;
+    let content = this.props.content;
     return (
       <nav className="navbar navbar-ct-blue" role="navigation">
         <div className="container-fluid">
@@ -27,14 +20,14 @@ class Header extends Component {
           </div>
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul className="nav navbar-nav">
-              <li><a href="#gsdk" >{this.props.data.header.iphonerepair}</a></li>
-              <li><a href="#gsdk">{this.props.data.header.ipadrepair}</a></li>
-              <li><a href="#gsdk">{this.props.data.header.pricing}</a></li>
-              <li><a href="#gsdk">{this.props.data.header.aboutus}</a></li>
+              <li><a href="#gsdk" >{content.header.iphonerepair}</a></li>
+              <li><a href="#gsdk">{content.header.ipadrepair}</a></li>
+              <li><a href="#gsdk">{content.header.pricing}</a></li>
+              <li><a href="#gsdk">{content.header.aboutus}</a></li>
             </ul>
             <ul className="nav navbar-nav navbar-right">
               <li>
-                <button className="btn btn-default btn-round" onClick={this.handleLangChange.bind(this)}>简体中文</button>
+                <button className="btn btn-default btn-round" onClick={switchLanguage.bind(this,content.switch.target)}>{content.switch.lang}</button>
               </li>
             </ul>
           </div>

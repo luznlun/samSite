@@ -4,6 +4,10 @@ import Header from './Header';
 import Ad from './Ad';
 import Footer from './Footer';
 import json from '../lang.json';
+let actions = require('./Action/actions');
+let ReactRedux = require('react-redux');
+
+
 
 class App extends Component {
   constructor(props) {
@@ -14,30 +18,21 @@ class App extends Component {
     };
   }
 
-  switchLang(lang){
-    if(lang==='en'){
-      this.state = {
-        lang: json.en,
-        current: 'en'
-      };
-    }else{
-      this.state = {
-        lang: json.ch,
-        current: 'ch'
-      }
-    }
-
-  }
   render() {
-    console.log("*****",this.state.current)
+    const content = this.props.content;
+    const switchLanguage = this.props.switchLanguage;
+
     return (
       <div>
-        <Header data={this.state.lang} current={this.state.current} switchLang={this.switchLang.bind(this)}/>
-        <Ad/>
-        <Footer/>
+        <Header content={content} switchLanguage={switchLanguage}/>
+        <Ad content={content}/>
+        <Footer content={content}/>
       </div>
     );
   }
 }
 
-export default App;
+module.exports = ReactRedux.connect(
+  (state) => ({content: state.content}),
+  (dispatch) => ({switchLanguage: (lang) => dispatch(actions.switchLanguage(lang))})
+)(App);

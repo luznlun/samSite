@@ -9,6 +9,10 @@
     "ad":{
       "appointment":"Make Appointment",
       "vipappoinment":"VIP Appointment"
+    },
+    "switch":{
+      "lang":"简体中文",
+      "target":"ch"
     }
   },
   "ch":{
@@ -21,6 +25,10 @@
     "ad":{
       "appointment":"预约",
       "vipappoinment":"VIP 预约"
+    },
+    "switch":{
+      "lang":"English",
+      "target":"en"
     }
   }
 }
