@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './Header';
 import Ad from './Ad';
+import Content from './Content';
+
 import Footer from './Footer';
 import json from '../lang.json';
 let actions = require('./Action/actions');
@@ -26,6 +28,7 @@ class App extends Component {
       <div>
         <Header content={content} switchLanguage={switchLanguage}/>
         <Ad content={content}/>
+        <Content/>
         <Footer content={content}/>
       </div>
     );
