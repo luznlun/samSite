@@ -13,7 +13,7 @@ class Footer extends Component {
           </div>
           <div className="col-md-4">
             <h2>MAP</h2>
-            <iframe className="col-md-12" width="600" height="450" frameBorder="0" style={{border:"0"}} src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJUSGv8WWHhYARMREszDov4lM&key=AIzaSyAIIK2LHrTnW-SIsJPeQdEkDmf67k89tU4" allowFullScreen></iframe>
+            <iframe className="col-md-12" width="600" height="450" frameBorder="0" style={{border:"0"}} src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJUSGv8WWHhYARMREszDov4lM&key=AIzaSyBIphdq8aiWRDeafRSJ12WV2wpi0H5-Zbw" allowFullScreen></iframe>
           </div>
           <div className="col-md-4">
             <h2 style={{"color":"#8ec641"}}>FREE PARKING</h2>
