@@ -13,6 +13,12 @@
     "switch":{
       "lang":"简体中文",
       "target":"ch"
+    },
+    "pricing":{
+      "product":"Product",
+      "description":"Description",
+      "price":"Price",
+      "warranty":"Warranty"
     }
   },
   "ch":{
@@ -29,6 +35,12 @@
     "switch":{
       "lang":"English",
       "target":"en"
+    },
+    "pricing":{
+      "product":"商品",
+      "description":"详解",
+      "price":"价格",
+      "warranty":"保修"
     }
   }
 }

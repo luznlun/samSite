@@ -16,14 +16,14 @@ class Header extends Component {
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
             </button>
-            <a className="navbar-brand" href="#gsdk">Company name</a>
+            <a className="navbar-brand" href="/">Company name</a>
           </div>
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul className="nav navbar-nav">
-              <li><a href="#gsdk" >{content.header.iphonerepair}</a></li>
-              <li><a href="#gsdk">{content.header.ipadrepair}</a></li>
-              <li><a href="#gsdk">{content.header.pricing}</a></li>
-              <li><a href="#gsdk">{content.header.aboutus}</a></li>
+              <li><a href="/iphone" >{content.header.iphonerepair}</a></li>
+              <li><a href="/ipad">{content.header.ipadrepair}</a></li>
+              <li><a href="/pricing">{content.header.pricing}</a></li>
+              <li><a href="/aboutus">{content.header.aboutus}</a></li>
             </ul>
             <ul className="nav navbar-nav navbar-right">
               <li>
