@@ -16,8 +16,8 @@ ReactDOM.render(
   <Provider {... { store }}>
     <Router history={browserHistory}>
       <Route path="/" component={App}/>
-      <Route path="/parking" component={Parking}/>
-      <Route path="/pricing" component={Pricing}/>
+      <Route path="parking" component={Parking}/>
+      <Route path="pricing" component={Pricing}/>
       <Route path="*" component={Notfound}/>
     </Router>
   </Provider>,

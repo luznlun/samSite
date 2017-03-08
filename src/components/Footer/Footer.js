@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router'
 
 class Footer extends Component {
   render() {
@@ -17,7 +18,7 @@ class Footer extends Component {
           <div className="col-md-4">
             <h2 style={{"color":"#8ec641"}}>FREE PARKING</h2>
             <img className="col-xs-12 col-sm-12 col-md-12" src="/parking-small.jpg" role="presentation"></img>
-            <p><a className="btn btn-secondary" href="/parking" role="button">View details »</a></p>
+            <p><Link to={'/parking'}><button className="btn btn-secondary" role="button">View details »</button></Link></p>
           </div>
         </div>
         <hr/>

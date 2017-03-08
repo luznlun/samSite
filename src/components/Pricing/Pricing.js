@@ -3,19 +3,60 @@ import Header from '../Header/Header';
 import Ad from '../Ad/Ad';
 
 import Footer from '../Footer/Footer';
-import json from '../../../lang.json';
 let actions = require('../../Action/actions');
 let ReactRedux = require('react-redux');
-
+import $ from 'jquery';
 
 
 class Pricing extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      lang: json.en,
-      current: 'en'
-    };
+
+  componentDidMount(){
+
+    $('[data-toggle="gsdk-collapse"]').hover(
+    function(){
+            console.log('on hover');
+            var thisdiv = $(this).attr("data-target");
+
+            if(!$(this).hasClass('state-open')){
+                $(this).addClass('state-hover');
+                $(thisdiv).css({
+                    'height':'30px'
+                });
+            }
+
+        },
+        function(){
+            var thisdiv = $(this).attr("data-target");
+            $(this).removeClass('state-hover');
+
+            if(!$(this).hasClass('state-open')){
+                $(thisdiv).css({
+                    'height':'0px'
+                });
+            }
+        }
+    );
+
+    $('[data-toggle="gsdk-collapse"]').click(
+    function(event){
+            event.preventDefault();
+
+            var thisdiv = $(this).attr("data-target");
+            var height = $(thisdiv).children('.panel-body').height();
+
+            if($(this).hasClass('state-open')){
+                $(thisdiv).css({
+                    'height':'0px',
+                });
+                $(this).removeClass('state-open');
+            } else {
+                $(thisdiv).css({
+                    'height':height,
+                });
+                $(this).addClass('state-open');
+            }
+        }
+    );
   }
 
   render() {
@@ -31,7 +72,7 @@ class Pricing extends Component {
             <div className="panel panel-default">
               <div className="panel-heading">
                 <h4 className="panel-title">
-                  <a data-target="#collapseOne" href="#collapseOne" data-toggle="gsdk-collapse" className="">
+                  <a data-target="#collapseOne" data-toggle="gsdk-collapse" className="">
                     {content.header.iphonerepair}
                   </a>
                 </h4>

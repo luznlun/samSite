@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './Header.css';
+import { Link } from 'react-router'
+
 
 class Header extends Component {
 
@@ -16,14 +18,14 @@ class Header extends Component {
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
             </button>
-            <a className="navbar-brand" href="/">Company name</a>
+            <Link to={'/'}><div className="navbar-brand">Company name</div></Link>
           </div>
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul className="nav navbar-nav">
-              <li><a href="/iphone" >{content.header.iphonerepair}</a></li>
-              <li><a href="/ipad">{content.header.ipadrepair}</a></li>
-              <li><a href="/pricing">{content.header.pricing}</a></li>
-              <li><a href="/aboutus">{content.header.aboutus}</a></li>
+              <li><Link to={'/iphone'}>{content.header.iphonerepair}</Link></li>
+              <li><Link to={'/ipad'}>{content.header.ipadrepair}</Link></li>
+              <li><Link to={'/pricing'}>{content.header.pricing}</Link></li>
+              <li><Link to={'/aboutus'}>{content.header.aboutus}</Link></li>
             </ul>
             <ul className="nav navbar-nav navbar-right">
               <li>

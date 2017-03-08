@@ -5,7 +5,6 @@ import Ad from '../Ad/Ad';
 import Content from '../../Content';
 
 import Footer from '../Footer/Footer';
-import json from '../../../lang.json';
 let actions = require('../../Action/actions');
 let ReactRedux = require('react-redux');
 
