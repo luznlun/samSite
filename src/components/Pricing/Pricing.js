@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Header from './Header';
-import Ad from './Ad';
+import Header from '../Header/Header';
+import Ad from '../Ad/Ad';
 
-import Footer from './Footer';
-import json from '../lang.json';
-let actions = require('./Action/actions');
+import Footer from '../Footer/Footer';
+import json from '../../../lang.json';
+let actions = require('../../Action/actions');
 let ReactRedux = require('react-redux');
 
 

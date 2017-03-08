@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import Notfound from './Notfound';
-import Parking from './Parking';
-import Pricing from './Pricing';
+import App from './components/App/App';
+import Notfound from './components/Notfound/Notfound';
+import Parking from './components/Parking/Parking';
+import Pricing from './components/Pricing/Pricing';
 import './index.css';
 import { Router, Route, browserHistory } from 'react-router';
 const Provider = require('react-redux').Provider;
