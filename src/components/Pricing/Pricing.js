@@ -85,10 +85,8 @@ class Pricing extends Component {
                         <thead>
                             <tr>
                                 <th className="text-center"></th>
-                                <th>{content.pricing.product}</th>
                                 <th className="th-description">{content.pricing.description}</th>
                                 <th className="text-right">{content.pricing.price}</th>
-                                <th className="text-right">{content.pricing.warranty}</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -99,17 +97,10 @@ class Pricing extends Component {
                                     </div>
                                 </td>
                                 <td className="td-name">
-                                    Iphone 7 cracked screen
+                                    <p>{content.product.ip7cr}</p>
                                 </td>
-                                <td>
-                                    <p>Screen Front Glass Replacement(Screen Cracked, but still display and responsive to touch)</p>
-                                </td>
-
                                 <td className="td-number">
                                     <small>$</small>100
-                                </td>
-                                <td className="td-number">
-                                    1 year
                                 </td>
                             </tr>
                             <tr>
@@ -118,17 +109,9 @@ class Pricing extends Component {
                                         <img style={{"width":"100px"}} src="/ip7chport.jpg" alt="..."/>
                                     </div>
                                 </td>
-                                <td className="td-name">
-                                    Iphone 7 Charging port
-                                </td>
-                                <td>
-                                    Charging Port（unable to charge or connect to computer)
-                                </td>
-
+                                <td>{content.product.ip7chport}</td>
                                 <td className="td-number">
 
-                                </td>
-                                <td className="td-number">
                                 </td>
                             </tr>
                             <tr>
@@ -137,17 +120,9 @@ class Pricing extends Component {
                                         <img style={{"width":"100px"}} src="/ip7batt.jpg" alt="..."/>
                                     </div>
                                 </td>
-                                <td className="td-name">
-                                    Iphone 7 Battery Replacement
-                                </td>
-                                <td>
-                                    Battery Replacement(battery draining to quickly)
-                                </td>
-
+                                <td>{content.product.ip7batt}</td>
                                 <td className="td-number">
-
                                 </td>
-                                <td className="td-number"></td>
                             </tr>
                             <tr>
                                 <td>
@@ -155,13 +130,28 @@ class Pricing extends Component {
                                         <img style={{"width":"100px"}} src="/ip7pb.jpg" alt="..."/>
                                     </div>
                                 </td>
-                                <td className="td-name">
-                                    Iphone 7 Power Button
+                                <td>{content.product.ip7pb}</td>
+                                <td className="td-number">
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td>
+                                    <div className="img-container">
+                                        <img style={{"width":"100px"}} src="/ip7camf.jpg" alt="..."/>
+                                    </div>
+                                </td>
+                                <td>Front Camera</td>
+                                <td className="td-number">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div className="img-container">
+                                        <img style={{"width":"100px"}} src="/ip7pb.jpg" alt="..."/>
+                                    </div>
                                 </td>
                                 <td>
                                   Power/Lock button
-                                </td>
-                                <td className="td-number">
                                 </td>
                                 <td className="td-number">
                                 </td>
@@ -172,12 +162,7 @@ class Pricing extends Component {
                                         <img style={{"width":"100px"}} src="/ip7camf.jpg" alt="..."/>
                                     </div>
                                 </td>
-                                <td className="td-name">
-                                    Iphone 7 Front Camera
-                                </td>
                                 <td>Front Camera</td>
-                                <td className="td-number">
-                                </td>
                                 <td className="td-number">
                                 </td>
                             </tr>
@@ -199,7 +184,97 @@ class Pricing extends Component {
               </div>
               <div id="collapseTwo" className="panel-collapse collapse gsdk-collapse" style={{"height":"0px"}}>
                 <div className="panel-body">
-                  Something
+                  <div className="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+                    <div className="table-responsive">
+                    <table className="table table-shopping">
+                        <thead>
+                            <tr>
+                                <th className="text-center"></th>
+                                <th className="th-description">{content.pricing.description}</th>
+                                <th className="text-right">{content.pricing.price}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div className="img-container">
+                                        <img style={{"width":"100px"}} src="../ip7cr.jpg" alt="..."/>
+                                    </div>
+                                </td>
+                                <td className="td-name">
+                                    <p>{content.product.ip7cr}</p>
+                                </td>
+                                <td className="td-number">
+                                    <small>$</small>100
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td>
+                                    <div className="img-container">
+                                        <img style={{"width":"100px"}} src="/ip7chport.jpg" alt="..."/>
+                                    </div>
+                                </td>
+                                <td>{content.product.ip7chport}</td>
+                                <td className="td-number">
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div className="img-container">
+                                        <img style={{"width":"100px"}} src="/ip7batt.jpg" alt="..."/>
+                                    </div>
+                                </td>
+                                <td>{content.product.ip7batt}</td>
+                                <td className="td-number">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div className="img-container">
+                                        <img style={{"width":"100px"}} src="/ip7pb.jpg" alt="..."/>
+                                    </div>
+                                </td>
+                                <td>{content.product.ip7pb}</td>
+                                <td className="td-number">
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td>
+                                    <div className="img-container">
+                                        <img style={{"width":"100px"}} src="/ip7camf.jpg" alt="..."/>
+                                    </div>
+                                </td>
+                                <td>Front Camera</td>
+                                <td className="td-number">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div className="img-container">
+                                        <img style={{"width":"100px"}} src="/ip7pb.jpg" alt="..."/>
+                                    </div>
+                                </td>
+                                <td>
+                                  Power/Lock button
+                                </td>
+                                <td className="td-number">
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td>
+                                    <div className="img-container">
+                                        <img style={{"width":"100px"}} src="/ip7camf.jpg" alt="..."/>
+                                    </div>
+                                </td>
+                                <td>Front Camera</td>
+                                <td className="td-number">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
