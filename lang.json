@@ -10,6 +10,12 @@
       "appointment":"Make Appointment",
       "vipappoinment":"Member Appointment"
     },
+    "footer":{
+      "freeparking":"Free Parking",
+      "findusonyelp":"Find Us on Yelp",
+      "map":"Map",
+      "detail":"View Detail"
+    },
     "switch":{
       "lang":"简体中文",
       "target":"ch"
@@ -38,6 +44,12 @@
     "ad":{
       "appointment":"预约",
       "vipappoinment":"会员预约"
+    },
+    "footer":{
+      "freeparking":"免费拍车",
+      "findusonyelp":"在Yelp找我们",
+      "map":"地图",
+      "detail":"查看详解"
     },
     "switch":{
       "lang":"English",
