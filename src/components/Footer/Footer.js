@@ -25,11 +25,6 @@ var client = yelp.createClient({
     "token": 'Tfx-YcWPXNeME7AF5Wsdeq6lvPIRugBv',
     "token_secret": 'sUIlbk7wEe_q6IMgizCVO6myjs8',
   },
-
-  // Optional settings:
-  httpClient: {
-    maxSockets: 25  // ~> Default is 10
-  }
 });
 
 var callBack= function(error, response, body){
@@ -96,6 +91,7 @@ function Welcome() {
   client.business("bonjour-professional-iphone-ipad-repair-and-electronic-center-san-francisco", {
     cc: "US"
   }).then(function (data) {
+    console.log("***data: ",data);
   });
 }
 
