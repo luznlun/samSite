@@ -1,22 +1,19 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router'
 var Yelp = require('yelp');
+import $ from 'jquery';
 
 var yelp = new Yelp({
   consumer_key: '53Fk-70GCjVzZVyXEH0avQ',
   consumer_secret: 'Qvmca553bAh2wnfHt8hla6jr4Ls',
-  token: '2g0TC-RTlGlvikrZ4qesIKtcXMosObJK',
-  token_secret: 'ebhDU5oujyIcq3TxlXusvGqw9JA',
+  token: 'Tfx-YcWPXNeME7AF5Wsdeq6lvPIRugBv',
+  token_secret: 'sUIlbk7wEe_q6IMgizCVO6myjs8',
 });
 
 function Welcome() {
-  yelp.search({ term: 'food', location: 'Montreal' })
-    .then(function (data) {
-      console.log(data);
-    })
-    .catch(function (err) {
-      console.error(err);
-    });
+  yelp.business('bonjour-professional-iphone-ipad-repair-and-electronic-center-san-francisco')
+  .then(console.log)
+  .catch(console.error);
 }
 
 
@@ -27,10 +24,6 @@ class Footer extends Component {
   }
 
 
-
-  // var test = function(){
-  //
-  // }
 
 
   render() {
