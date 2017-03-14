@@ -2,96 +2,38 @@ import React, { Component } from 'react';
 import { Link } from 'react-router'
 import $ from 'jquery';
 
-// var Yelp = require('yelp');
-var oauthSignature = require('oauth-signature');
-var n = require('nonce')();
-var request = require('request');
-var qs = require('querystring');
-var _ = require('lodash');
+var Yelp = require('yelp');
 
-var yelp = require('node-yelp');
-
-// var yelp = new Yelp({
-//   consumer_key: '53Fk-70GCjVzZVyXEH0avQ',
-//   consumer_secret: 'Qvmca553bAh2wnfHt8hla6jr4Ls',
-//   token: 'Tfx-YcWPXNeME7AF5Wsdeq6lvPIRugBv',
-//   token_secret: 'sUIlbk7wEe_q6IMgizCVO6myjs8',
-// });
-
-var client = yelp.createClient({
-  oauth: {
-    "consumer_key": '53Fk-70GCjVzZVyXEH0avQ',
-    "consumer_secret": 'Qvmca553bAh2wnfHt8hla6jr4Ls',
-    "token": 'Tfx-YcWPXNeME7AF5Wsdeq6lvPIRugBv',
-    "token_secret": 'sUIlbk7wEe_q6IMgizCVO6myjs8',
-  },
+var yelp = new Yelp({
+  consumer_key: '53Fk-70GCjVzZVyXEH0avQ',
+  consumer_secret: 'Qvmca553bAh2wnfHt8hla6jr4Ls',
+  token: 'Tfx-YcWPXNeME7AF5Wsdeq6lvPIRugBv',
+  token_secret: 'sUIlbk7wEe_q6IMgizCVO6myjs8',
 });
 
-var callBack= function(error, response, body){
-  console.log("***",error)
-  console.log("***",response)
-  console.log("***",body)
+function Welcome(){
+  // See http://www.yelp.com/developers/documentation/v2/search_api
+  yelp.search({ term: 'food', location: 'Montreal' })
+  .then(function (data) {
+    console.log(data);
+  })
+  .catch(function (err) {
+    console.error(err);
+  });
 
-}
+  // See http://www.yelp.com/developers/documentation/v2/business
+  yelp.business('yelp-san-francisco')
+    .then(console.log)
+    .catch(console.error);
 
+  yelp.phoneSearch({ phone: '+15555555555' })
+    .then(console.log)
+    .catch(console.error);
 
-//
-// var request_yelp = function(set_parameters, callback) {
-//
-//   /* The type of request */
-//   var httpMethod = 'GET';
-//
-//   /* The url we are using for the request */
-//   var url = 'http://api.yelp.com/v2/buniness';
-//
-//   /* We can setup default parameters here */
-//   var default_parameters = {
-//     location: 'San+Francisco',
-//     sort: '2'
-//   };
-//
-//   /* We set the require parameters here */
-//   var required_parameters = {
-//     oauth_consumer_key : "53Fk-70GCjVzZVyXEH0avQ",
-//     oauth_token : 'Tfx-YcWPXNeME7AF5Wsdeq6lvPIRugBv',
-//     oauth_nonce : n(),
-//     oauth_timestamp : n().toString().substr(0,10),
-//     oauth_signature_method : 'HMAC-SHA1',
-//     oauth_version : '1.0'
-//   };
-//
-//   /* We combine all the parameters in order of importance */
-//   var parameters = _.assign(default_parameters, set_parameters, required_parameters);
-//
-//   /* We set our secrets here */
-//   var consumerSecret = 'Qvmca553bAh2wnfHt8hla6jr4Ls';
-//   var tokenSecret = 'sUIlbk7wEe_q6IMgizCVO6myjs8';
-//
-//   /* Then we call Yelp's Oauth 1.0a server, and it returns a signature */
-//   /* Note: This signature is only good for 300 seconds after the oauth_timestamp */
-//   var signature = oauthSignature.generate(httpMethod, url, parameters, consumerSecret, tokenSecret, { encodeSignature: false});
-//
-//   /* We add the signature to the list of paramters */
-//   parameters.oauth_signature = signature;
-//
-//   /* Then we turn the paramters object, to a query string */
-//   var paramURL = qs.stringify(parameters);
-//
-//   /* Add the query string to the url */
-//   var apiURL = url+'?'+paramURL;
-//
-//   /* Then we use request to send make the API Request */
-//   request(apiURL, function(error, response, body){
-//     return callback(error, response, body);
-//   });
-//
-// };
-
-function Welcome() {
-  client.business("bonjour-professional-iphone-ipad-repair-and-electronic-center-san-francisco", {
-    cc: "US"
-  }).then(function (data) {
-    console.log("***data: ",data);
+  // A callback based API is also available:
+  yelp.business('yelp-san-francisco', function(err, data) {
+    if (err) return console.log(err);
+    console.log(data);
   });
 }
 
