@@ -87,7 +87,8 @@ class Footer extends Component {
             <h2 className="primary-title" style={{"color":"#d32323"}}>{content.footer.findusonyelp}</h2>
             <img className="col-xs-12 col-md-12" src={this.state.body.image_url} role="presentation"></img>
             <div className="container">
-              <img src={this.state.body.rating_img_url} role="presentation"></img><span>reviews: {this.state.body.review_count}</span>
+              <a href={this.state.body.url} ><img src={this.state.body.rating_img_url} role="presentation"></img></a>
+              <span>reviews: {this.state.body.review_count}</span>
             </div>
           </div>
           <div className="col-md-4">
