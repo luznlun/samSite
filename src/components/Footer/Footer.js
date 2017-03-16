@@ -6,6 +6,8 @@ var request = require('request');
 var qs = require('querystring');
 var _ = require('lodash');
 
+var fetch = require('node-fetch');
+
 
 class Footer extends Component {
 
@@ -68,9 +70,14 @@ class Footer extends Component {
     var apiURL = url+'?'+paramURL;
 
     /* Then we use request to send make the API Request */
-    request(apiURL, function(error, response, body){
-      return callback(error, response, body);
+    fetch(apiURL, {mode: 'no-cors'}).then(function(res) {
+        return res.text();
+    }).then(function(body) {
+        console.log(body);
     });
+    // request(apiURL, function(error, response, body){
+    //   return callback(error, response, body);
+    // });
 
   };
 
@@ -79,7 +86,6 @@ class Footer extends Component {
 
   render() {
     let content = this.props.content;
-    console.log("***body: ",this.state.body.snippet_image_url)
     return (
       <div className="container">
         <div className="row">
